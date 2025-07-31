@@ -1,4 +1,5 @@
 import requests
+import os
 from bs4 import BeautifulSoup
 
 # 中油油價公告頁（實際網址可能需要你更新）
@@ -31,7 +32,7 @@ if oil_section:
 else:
     print("找不到油價資料")
     
-channel_access_token = "xPf+q95sdpLv68wbU48tI3FHqP83sQeAvx5sUXi3cSOjIgVVKDPTG1NtIKchv64riyw4HnvkjT+BdRL3UhPknhg6+Rt+u1xbeV8Qlv3JF7Hg3lFaCdLtuX5kZmuC/jKBP0Xj4RrmcAgTXwYj6kohCAdB04t89/1O/w1cDnyilFU="
+channel_access_token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
 line_headers = {
     "Authorization": f"Bearer {channel_access_token}",
     "Content-Type": "application/json"
