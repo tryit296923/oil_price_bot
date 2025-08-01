@@ -2,7 +2,7 @@ name: Daily Oil Price Notify
 
 on:
   schedule:
-    - cron: "*/5 * * * *" # UTC 時間每天 1:00 執行（台灣是 UTC+8，請調整時差）
+    - cron: "*/5 * * * *" # UTC 時間每天 1:00
   workflow_dispatch: # 可手動觸發
 
 jobs:
